@@ -16,7 +16,7 @@ const allQuotes = [
 const GoalData = JSON.parse(localStorage.getItem('AllData')) || {};
 let completedGoalCount = Object.values(GoalData).filter((val) => val.result).length;
 barValue.style.width = `${completedGoalCount / len * 100}%`;
-barValue.firstElementChild.innerText = `${completedGoalCount}//${len} Completed`;
+barValue.firstElementChild.innerText = `${completedGoalCount}/${len} Completed`;
 TaskTital.innerText = allQuotes[completedGoalCount];
 
 checkList.forEach((checkBox) => {
